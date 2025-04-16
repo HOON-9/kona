@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 214 82 29; /* #042D5D */
+  --background: 255 255 255; /* #FFFFFF */
+  --foreground: 0 0 0;
+  --muted: 242 242 242; /* #F2F2F2 */
+  --accent: 224 230 243; /* #E0E6F3 */
+}
+
+body {
+  font-family: "Noto Sans KR", var(--font-montserrat), sans-serif;
+  color: #333;
+  background-color: white;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-montserrat), "Noto Sans KR", sans-serif;
+  }
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+}
+
+.vehicle-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+}
